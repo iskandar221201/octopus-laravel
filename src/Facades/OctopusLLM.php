@@ -1,19 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace OctopusLLM\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use OctopusLLM\Laravel\OctopusGateway;
 
 /**
  * @see \OctopusLLM\Laravel\OctopusGateway
  */
 class OctopusLLM extends Facade
 {
-    /**
-     * Get the registered name of the component.
-     */
     protected static function getFacadeAccessor(): string
     {
-        return \OctopusLLM\Laravel\OctopusGateway::class;
+        return OctopusGateway::class;
     }
 }
