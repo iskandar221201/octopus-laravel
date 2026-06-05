@@ -24,6 +24,9 @@ Octopus LLM Gateway allows you to seamlessly integrate multiple LLM providers (l
 
 ## 📦 Installation
 
+> [!IMPORTANT]
+> This package requires **PHP 8.3 or higher** and **Laravel 11.0 or higher**.
+
 To install the package, run the following command in your Laravel project:
 
 ```bash
