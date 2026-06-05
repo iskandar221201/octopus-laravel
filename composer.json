@@ -1,0 +1,36 @@
+{
+    "name": "octopus-llm/laravel",
+    "description": "OpenAI-compatible AI gateway untuk Laravel dengan multi-key rotation, circuit breaker, dan zero-cost free tier management.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.3",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/cache": "^11.0|^12.0|^13.0",
+        "illuminate/console": "^11.0|^12.0|^13.0",
+        "illuminate/events": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "orchestra/testbench": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OctopusLLM\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OctopusLLM\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["OctopusLLM\\Laravel\\OctopusLLMServiceProvider"],
+            "aliases": {
+                "OctopusLLM": "OctopusLLM\\Laravel\\Facades\\OctopusLLM"
+            }
+        }
+    }
+}
