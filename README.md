@@ -113,11 +113,33 @@ return [
 ];
 ```
 
-Define your API keys in your `.env` file as comma-separated values:
+### 📝 Environment Variables (.env)
+
+Add the following environment variables to your application's `.env` file to configure the gateway:
 
 ```env
-GROQ_KEYS=test-key-1,test-key-2
-OPENROUTER_KEYS=test-key-or-1
+# LLM Providers API Keys (comma-separated for key rotation)
+GROQ_KEYS=key-1,key-2
+OPENROUTER_KEYS=key-or-1
+CEREBRAS_KEYS=key-cerebras-1
+
+# Optional Model Customization
+GROQ_MODEL=llama-3.1-8b-instant
+OPENROUTER_MODEL=mistralai/mistral-7b-instruct:free
+CEREBRAS_MODEL=llama-3.1-8b
+
+# Optional Gateway Parameter Overrides
+OCTOPUS_TEMPERATURE=0.7
+OCTOPUS_TIMEOUT_MS=10000
+OCTOPUS_MAX_INPUT_TOKENS=4000
+OCTOPUS_MAX_RETRIES=2
+OCTOPUS_MAX_OUTPUT_TOKENS=1000
+OCTOPUS_CB_THRESHOLD=3
+OCTOPUS_PING_TIMEOUT=5
+OCTOPUS_STORAGE=cache
+OCTOPUS_CACHE_PREFIX=octopus_llm_state
+OCTOPUS_CACHE_TTL=86400
+OCTOPUS_STREAMING=true
 ```
 
 ---
