@@ -1,1 +1,8 @@
 /agent
+/vendor
+.phpunit.result.cache
+.phpunit.cache/
+.env
+.idea/
+.vscode/
+.DS_Store
